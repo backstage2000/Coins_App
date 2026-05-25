@@ -1,4 +1,4 @@
-import columns from "./columns";
+import columns from "./Columns";
 
 const skeletonData = Array.from({ length: 10 }, (_, i) => ({ id: i }));
 
@@ -48,6 +48,6 @@ const skeletonColumns = columns.map((col) => ({
   ),
 }));
 
-const skeleton = { skeletonData, skeletonColumns };
+const SkeletonTable = { skeletonData, skeletonColumns };
 
-export default skeleton;
+export default SkeletonTable;

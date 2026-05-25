@@ -1,4 +1,4 @@
-export const theme = {
+const theme = {
   token: {
     colorPrimary: "#1677ff",
     borderRadius: 12,
@@ -20,3 +20,5 @@ export const theme = {
     },
   },
 };
+
+export default theme;

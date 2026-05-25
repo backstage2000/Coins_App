@@ -1,9 +1,9 @@
 import { useState } from "react";
-import DashboardCard from "../components/DashboardCard";
-import useCoinMarketChart from "../features/chart/hooks/useGetCoinMarketChart";
-import { mapChartData } from "../utils/mapChartData";
-import { useGetCoins } from "../features/coins/hooks/useGetCoins";
-import { useManualRefetch } from "../hooks/useManualRefetch";
+import { useGetCoins } from "@features/coins/hooks";
+import { useCoinMarketChart } from "@features/chart/hooks";
+import { DashboardCard } from "@components";
+import { useManualRefetch } from "@hooks";
+import { mapChartData } from "@utils";
 
 export default function ChartPage() {
   const [type, setType] = useState("price");

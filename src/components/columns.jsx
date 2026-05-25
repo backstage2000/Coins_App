@@ -1,6 +1,5 @@
 import format from "../utils/format";
-import CoinCell from "./CoinCell";
-import PriceChangeCell from "./PriceChangeCell";
+import { CoinCell, PriceChangeCell } from "@components";
 
 import { Typography } from "antd";
 

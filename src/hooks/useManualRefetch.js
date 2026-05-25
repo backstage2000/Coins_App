@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useManualRefetch = (refetch) => {
+const useManualRefetch = (refetch) => {
   const [isManualRefetching, setIsManualRefetching] = useState(false);
 
   const handleRefetch = async () => {
@@ -11,3 +11,6 @@ export const useManualRefetch = (refetch) => {
 
   return { isManualRefetching, handleRefetch };
 };
+
+
+export default useManualRefetch;

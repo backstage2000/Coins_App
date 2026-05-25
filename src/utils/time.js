@@ -1,1 +1,3 @@
-export const MINUTES = 60_000;
+const MINUTES = 60_000;
+
+export default MINUTES;

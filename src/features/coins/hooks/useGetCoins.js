@@ -1,9 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { getCoins } from "../service/getCoins";
+import { MINUTES } from "@utils";
 
-const MINUTES = 60_000;
-
-export function useGetCoins({ page = 1, perPage = 20 } = {}) {
+export default function useGetCoins({ page = 1, perPage = 20 } = {}) {
   return useQuery({
     queryKey: ["coins", page, perPage],
     queryFn: () => getCoins({ page, perPage }),

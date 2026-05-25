@@ -6,9 +6,7 @@ export default function CryptoChartSkeleton() {
       title={<Skeleton.Input active style={{ width: 160 }} />}
       extra={<Skeleton.Button active />}
     >
-      {/* chart area */}
       <div style={{ height: 320, position: "relative" }}>
-        {/* Y axis skeleton */}
         <div
           style={{
             position: "absolute",
@@ -26,7 +24,6 @@ export default function CryptoChartSkeleton() {
           ))}
         </div>
 
-        {/* X axis skeleton */}
         <div
           style={{
             position: "absolute",
@@ -42,7 +39,6 @@ export default function CryptoChartSkeleton() {
           ))}
         </div>
 
-        {/* GRID + LINE */}
         <div
           style={{
             position: "absolute",
@@ -53,7 +49,6 @@ export default function CryptoChartSkeleton() {
             padding: 10,
           }}
         >
-          {/* grid lines */}
           <div
             style={{
               position: "absolute",
@@ -72,7 +67,6 @@ export default function CryptoChartSkeleton() {
             ))}
           </div>
 
-          {/*  chart line */}
           <svg width="100%" height="100%">
             <path
               d="M0,120 C80,40 160,200 240,100 C320,0 400,180 480,80"

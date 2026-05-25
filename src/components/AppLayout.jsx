@@ -1,6 +1,6 @@
+import { routes } from "@config";
 import { Layout, Menu, theme } from "antd";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import { routes } from "../config/routes.jsx";
 
 const { Header, Sider, Content, Footer } = Layout;
 

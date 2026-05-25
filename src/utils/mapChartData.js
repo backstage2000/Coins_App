@@ -1,4 +1,4 @@
-export function mapChartData(data, days) {
+export default function mapChartData(data, days) {
   if (!data) return [];
 
   if (days === "1d") {

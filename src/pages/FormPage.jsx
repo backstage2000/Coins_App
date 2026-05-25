@@ -1,6 +1,5 @@
 import { useState } from "react";
-import ResultView from "../components/ResultView";
-import RegistrationForm from "../components/RegistrationForm";
+import { RegistrationForm, ResultView } from "@components";
 
 export default function FormPage() {
   const [submittedData, setSubmittedData] = useState(null);

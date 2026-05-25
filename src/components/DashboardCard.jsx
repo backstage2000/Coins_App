@@ -1,7 +1,6 @@
 import { Button, Card, Segmented, Select, Spin } from "antd";
-import CryptoChart from "./CryptoChart";
 import { RefreshCw } from "lucide-react";
-import CryptoChartSkeleton from "./CryptoChartSkeleton";
+import { CryptoChart, CryptoChartSkeleton } from "@components";
 
 const PERIODS = [
   { label: "1D", value: "1d" },

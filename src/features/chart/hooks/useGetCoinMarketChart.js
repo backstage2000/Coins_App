@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import { MINUTES } from "../../../utils/time";
 import { getCoinMarketChart } from "../service/getCoinMarketChart";
+import { MINUTES } from "@utils";
 
 export default function useCoinMarketChart({ coinId = "bitcoin", days = 7 }) {
   return useQuery({
@@ -15,7 +15,7 @@ export default function useCoinMarketChart({ coinId = "bitcoin", days = 7 }) {
     staleTime: 1 * MINUTES,
     gcTime: 5 * MINUTES,
     refetchOnWindowFocus: false,
-    // refetchInterval: 0.2 * MINUTES,
+    refetchInterval: 0.2 * MINUTES,
     retry: 1,
   });
 }
