@@ -2,10 +2,9 @@ import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { Table, Spin } from "antd";
 
-import columns from "../components/columns";
-
+import skeleton from "../components/SkeletonTable";
 import { useGetCoins } from "@features/coins/hooks";
-import { SkeletonTable } from "@components";
+import columns from "../components/columns";
 
 const PER_PAGE = Number(import.meta.env.VITE_PAGE_SIZE) || 50;
 
@@ -13,7 +12,7 @@ export default function CoinsPagePaged() {
   const [, setSortField] = useState(null);
   const [, setSortOrder] = useState(null);
   const [page, setPage] = useState(1);
-  const { skeletonColumns, skeletonData } = SkeletonTable;
+  const { skeletonColumns, skeletonData } = skeleton;
 
   const { data, isLoading, isFetching, isRefetching } = useGetCoins({
     page,
