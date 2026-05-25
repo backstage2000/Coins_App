@@ -1,50 +1,62 @@
-# Тестове завдання
+# Crypto
 
-Стартовий шаблон на **React + Vite + Ant Design + React Router**.
+## Tech Stack
 
-## Контекст
+- **React** — UI library
+- **TanStack Query** — server state management
+- **Axios** — HTTP client
+- **Motion** — animations
+- **Ant Design** — UI library
+- **lucide-react** — UI Icons
 
-Це завдання - зріз навичок під реальний продукт, який ми починаємо. Продукт - **аналітична панель** з таблицями даних, дашбордами, фільтрами і налаштуваннями. Дані тягнуться з бекенду, який в свою чергу тягне їх з зовнішніх API в режимі, близькому до реального часу, і регулярно перераховуються.
 
-API в завданнях - публічні (CoinGecko), тематика умовна. Сенс не в криптовалютах, а в навичках роботи з даними.
+##  📁Project Structure
 
-## На що робиться упор
+```
+src/
+├── main.jsx           # Entry point
+├── store.jsx          # React Query client setup
+├── config/            # App configuration (Router, axios , theme)
+├── pages/             # Route-level page components
+├── components/        # Shared UI components
+└── features/
+    └── chart/
+        ├── hooks/        # TanStack Query hooks
+        ├── services/     # Axios API calls
 
-- **Ant Design + `ConfigProvider`** - глобальна тема і глобальні стилі компонентів (`Table`, `Button`) без локальних `className`/inline-стилів.
-- **TanStack Query** - як ти будуєш ключі, як кешуєш, як працюєш з `refetch`, `refetchInterval`, лоадерами і станами `isLoading` / `isFetching`.
-- **Таблиця AntD** - sticky header і sticky колонка зліва, форматування чисел/відсотків, кольорова логіка, сортування.
-- **Реактивність UI** - авто-оновлення у фоні не блимає лоадером, ручне оновлення показує лоадер; інтерфейс не «стрибає» між рендерами.
-- **Графіки** - інтеграція будь-якої бібліотеки графіків, оновлення під вибір користувача.
-- **Форми AntD** - `Form` з валідацією і фінальним підсумком.
-- **Структура коду** - логічний поділ на `pages/`, `components/`, `hooks/`, перевикористання компонентів між сторінками (та сама таблиця в кількох місцях), без зайвих абстракцій.
+     └── coins/
+        ├── hooks/        # TanStack Query hooks
+        ├── services/     # Axios API calls
+     
+```
 
-## Що ми хочемо побачити в кандидаті
 
-- Розуміє, **коли стан належить URL, а коли - компоненту чи стору**.
-- Вміє працювати з UI бібліотеками на рівні теми і глобальних токенів, а не тільки локально.
-- Розуміє різницю між `isLoading` та `isFetching` і свідомо обирає, коли який показати.
-- Не дублює запити і компоненти - виносить логіку запитів у хуки, переписує таблицю одним компонентом для кількох сторінок.
-- Пише чистий, читабельний код без оверінжинірингу: рішення мають бути простими і прямими.
+## Getting Started
 
-## Що робити
+### 1. Clone the repository
 
-Усі завдання описані у [TASK.md](TASK.md). Кожне - окремий маршрут і окремий коміт.
+```bash
+git clone 
+cd frontend
+```
 
-Корисні посилання під кожне завдання зібрані у [docs/USEFUL_LINKS.md](docs/USEFUL_LINKS.md).
-
-## Запуск
-
-**Локально:**
+### 2. Install dependencies
 
 ```bash
 npm install
-npm run dev
 ```
 
-**Через Docker:**
+### 3. Configure environment variables
+
+Create a `.env` file in the root:
+
+```env
+VITE_API_URL=http://localhost:3000
+VITE_PAGE_SIZE=50
+```
+
+### 4. Run the project
 
 ```bash
-docker compose up --build
+npm run dev
 ```
-
-Додаток буде доступний на http://localhost:5173.
