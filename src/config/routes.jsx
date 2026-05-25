@@ -1,8 +1,9 @@
 import { HomeOutlined } from "@ant-design/icons";
-import { Coins } from "lucide-react";
+import { Coins, ChartCandlestick } from "lucide-react";
 import Home from "../pages/Home.jsx";
 import CoinsPage from "../pages/CoinsPage.jsx";
 import CoinsPagePaged from "../pages/CoinsPagePaged.jsx";
+import ChartPage from "../pages/ChartPage.jsx";
 
 export const routes = [
   { path: "/", label: "Home", icon: <HomeOutlined />, element: <Home /> },
@@ -17,5 +18,11 @@ export const routes = [
     label: "Coins-paged",
     icon: <Coins size={18} />,
     element: <CoinsPagePaged />,
+  },
+  {
+    path: "/chart",
+    label: "Chart",
+    icon: <ChartCandlestick size={18} />,
+    element: <ChartPage />,
   },
 ];
