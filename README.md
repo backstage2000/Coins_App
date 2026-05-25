@@ -18,6 +18,9 @@ src/
 ├── store.jsx          # React Query client setup
 ├── config/            # App configuration (Router, axios , theme)
 ├── pages/             # Route-level page components
+├── utils/             # Shared utility functions
+├── constants/         # constants data
+├── hooks/             # Global hooks (useManualRefetch)
 ├── components/        # Shared UI components
 └── features/
     └── chart/
