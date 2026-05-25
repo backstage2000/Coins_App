@@ -14,7 +14,7 @@ function CoinCell({ name, symbol, image }) {
           e.target.style.display = "none";
         }}
       />
-      <Space direction="vertical" size={0}>
+      <Space orientation="vertical" size={0}>
         <Text strong>{name}</Text>
         <Text type="secondary">{symbol}</Text>
       </Space>

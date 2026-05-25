@@ -7,12 +7,16 @@ import skeleton from "../components/SkeletonTable";
 
 const PER_PAGE = Number(import.meta.env.VITE_PAGE_SIZE) || 50;
 
-export default function CoinsPage() {
+export default function CoinsPagePaged() {
   const [, setSortField] = useState(null);
   const [, setSortOrder] = useState(null);
+  const [page, setPage] = useState(1);
   const { skeletonColumns, skeletonData } = skeleton;
 
-  const { data, isLoading, isFetching } = useGetCoins(1, PER_PAGE);
+  const { data, isLoading, isFetching, isRefetching } = useGetCoins({
+    page,
+    perPage: PER_PAGE,
+  });
 
   return (
     <Table
@@ -21,9 +25,13 @@ export default function CoinsPage() {
       rowKey="id"
       size="middle"
       scroll={{ y: 400 }}
-      pagination={false}
+      pagination={{
+        current: page,
+        pageSize: 20,
+        onChange: (page) => setPage(page),
+      }}
+      loading={!isRefetching && isLoading && isFetching}
       rowHoverable={!isLoading}
-      loading={isFetching}
       onChange={(_, __, sorter) => {
         setSortField(sorter.field ?? null);
         setSortOrder(sorter.order ?? null);

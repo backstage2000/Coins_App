@@ -1,8 +1,4 @@
-import axios from "axios";
-
-const apiClient = axios.create({
-  baseURL: "https://api.coingecko.com/api/v3",
-});
+import apiClient from "../../../config/axios";
 
 export async function getCoins({ page = 1, perPage = 50 } = {}) {
   const { data } = await apiClient.get("/coins/markets", {
