@@ -1,6 +1,6 @@
 import apiClient from "../../../config/axios";
 
-export async function getCoins({ page = 1, perPage = 50 } = {}) {
+export async function getCoins({ page = 1, perPage = 20 } = {}) {
   const { data } = await apiClient.get("/coins/markets", {
     params: {
       vs_currency: "usd",

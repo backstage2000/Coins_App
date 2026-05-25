@@ -25,6 +25,14 @@ function compact(value) {
   return "$" + value.toLocaleString("en-US");
 }
 
-const format = { price, compact };
+const formatPrice = (value) =>
+  new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    maximumFractionDigits: 2,
+  }).format(value);
+
+const format = { price, compact, formatPrice };
 
 export default format;

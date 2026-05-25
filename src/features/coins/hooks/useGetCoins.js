@@ -3,7 +3,7 @@ import { getCoins } from "../service/getCoins";
 
 const MINUTES = 60_000;
 
-export function useGetCoins({ page, perPage } = {}) {
+export function useGetCoins({ page = 1, perPage = 20 } = {}) {
   return useQuery({
     queryKey: ["coins", page, perPage],
     queryFn: () => getCoins({ page, perPage }),
