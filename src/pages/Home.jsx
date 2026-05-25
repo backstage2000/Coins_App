@@ -3,8 +3,6 @@ import { Card, Typography } from "antd";
 const { Title, Paragraph, Link } = Typography;
 
 function Home() {
-  console.log(import.meta.env.VITE_PAGE_SIZE);
-
   return (
     <Card>
       <Title level={2}>Тестове завдання</Title>
